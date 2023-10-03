@@ -8,15 +8,11 @@ export default function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
 
   const dropDownEl = useRef(null); // dropDownEl = { current:null }
-  console.log("after use ref", dropDownEl);
 
   const { logout, authUser } = useAuth();
-  console.log(authUser);
 
   useEffect(() => {
-    console.log("after use ref", dropDownEl);
     const handleClickOutside = (e) => {
-      console.log(e.target);
       if (!dropDownEl.current.contains(e.target)) {
         setIsOpen(false);
       }
