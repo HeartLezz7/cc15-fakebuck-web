@@ -32,7 +32,7 @@ export default function Dropdown() {
       </div>
       {isOpen && (
         <div className=" w-96 absolute bg-white right-0 translate-y-1 border rounded-xl shadow-xl p-2 ">
-          <Link to="/profile/aaaaa">
+          <Link to="/profile/aaa">
             <div className=" flex gap-4 p-2 items-center rounded-xl hover:bg-gray-200">
               <Avatar className="h-14" />
               <div>

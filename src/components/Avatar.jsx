@@ -1,4 +1,4 @@
-import defaultImage from "../assets/blank.png";
+import defaultImage from "../assets/ink.jpg";
 
 export default function Avatar({ className = "h-10" }) {
   const defaultClass = "rounded-full aspect-square";
