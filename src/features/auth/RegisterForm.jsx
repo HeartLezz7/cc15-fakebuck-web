@@ -54,7 +54,7 @@ export default function RegisterForm() {
   const handleSubmitForm = (e) => {
     e.preventDefault();
     const validationError = validateRegister(input);
-    console.log(validationError);
+    validationError;
     if (validationError) {
       return setError(validationError);
     }

@@ -44,9 +44,26 @@ export default function AuthcontextProvider({ children }) {
     setAuthUser(null);
   };
 
+  const updateProfile = async (data) => {
+    try {
+      const res = await axios.patch("/user", data);
+      console.log(res);
+      setAuthUser({ ...authUser, ...res.data });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <AuthContext.Provider
-      value={{ login, authUser, initialLoading, register, logout }}
+      value={{
+        login,
+        authUser,
+        initialLoading,
+        register,
+        logout,
+        updateProfile,
+      }}
     >
       {children}
     </AuthContext.Provider>
